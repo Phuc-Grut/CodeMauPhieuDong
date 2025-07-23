@@ -1,0 +1,577 @@
+<hoso-page style="font-size: 12pt; line-height: 20px;">
+    <div class="row no-gutters mt-3" style="line-height: normal;">
+        <!-- Dòng tiêu đề quốc hiệu -->
+        <div class="row w-100 mb-2">
+
+            <!-- Cột trái -->
+            <div class="col-3 text-right text-uppercase">
+                <div><strong>Bệnh viện tâm thần</strong></div>
+            </div>
+
+            <!-- Cột giữa: tên phiếu -->
+            <div class="col-6 text-center">
+                <div class="font-weight-bold text-uppercase">
+                    PHIẾU NHẬN ĐỊNH – PHÂN LOẠI <br />
+                    NGƯỜI BỆNH TẠI KHOA CẤP CỨU
+                </div>
+            </div>
+
+            <!-- Cột phải -->
+            <div class="col-3" style="font-family: 'Times New Roman'; font-size: 11pt;">
+                <div>MS: 39/BV1</div>
+
+                <hs-input-text label="Số vào viện:" [value]="" update=""> </hs-input-text>
+
+                <hs-input-text style="margin-top: -5px;" label="Mã người bệnh:" [value]="" update=""> </hs-input-text>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="font-size: 12pt; line-height: 1.4;">
+        <div class="font-weight-bold text-uppercase mt-1 mb-2">
+            A. THÔNG TIN NGƯỜI BỆNH
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-6">
+                <hs-input-text label="Họ và tên:" textareaStyle=" font-weight: bold; text-transform: uppercase;"
+                    [value]="" update=""></hs-input-text>
+            </div>
+
+            <div class="col-2">
+                <hs-input-text label="Tuổi:" textareaStyle=" font-weight: bold; text-transform: uppercase;" [value]=""
+                    update=""></hs-input-text>
+            </div>
+
+            <div class="col-4">
+                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+                    update="tempData.hsBenhAn.BenhNhan.GioiTinh" [value]="true" afterText="Nam">
+                </hs-input-check>
+                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+                    update="tempData.hsBenhAn.BenhNhan.GioiTinh" [value]="false" afterText="Nữ">
+                </hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-3">
+                <hs-input-text label="Phòng: " textareaStyle=" font-weight: bold; text-transform: uppercase;" [value]=""
+                    update=""></hs-input-text>
+            </div>
+
+            <div class="col-3">
+                <hs-input-text label="Giường:" textareaStyle=" font-weight: bold; text-transform: uppercase;" [value]=""
+                    update=""></hs-input-text>
+            </div>
+        </div>
+
+        <!-- phần B -->
+        <div class="font-weight-bold text-uppercase mt-1 mb-2">
+            B. PHẦN NHẬN ĐỊNH - PHÂN LOẠI
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12">
+                <hs-datepicker label="1. Ngày đến khám" [value]="context.tempData.hsBenhAn.NgayVaoVien"
+                    update="tempData.hsBenhAn.NgayVaoVien" format="HH 'giờ' mm 'phút, ngày' dd/MM/yyyy"></hs-datepicker>
+            </div>
+
+            <div class="col-12">
+                <hs-input-text label="2. Lý do vào viện, vấn đề sức khỏe"
+                    textareaStyle=" font-weight: bold; text-transform: uppercase;" [value]="" update=""></hs-input-text>
+            </div>
+
+            <div class="col-12">
+                <hs-input-text label="3. Kết quả đánh giá"
+                    textareaStyle=" font-weight: bold; text-transform: uppercase;" [value]="" update=""></hs-input-text>
+            </div>
+        </div>
+
+        <div>
+            Dấu hiệu sinh tồn cơ thể:
+        </div>
+
+        <div class="table-container">
+            <!-- hàng 1 -->
+            <div class="table-row font-weight-bold" style="font-size: 12px;">
+                <!-- cột 1 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <span>Thời gian thực hiện </span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- cột 2 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <span>Mạch</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- cột 3 -->
+
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <span>Huyết áp</span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- cột 4 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <span>Nhịp thở </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- cột 5 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <span>SpO2 </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- cột 6 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <span>Nhiệt độ </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- cột 7 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <span>BMI</span>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- cột 8-->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <span>Thang điểm hôn mê Glasgow</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- hàng 2 -->
+            <div class="table-row font-weight-bold" style="font-size: 12px;">
+                <!-- cột 1 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <span>Lần 1 </span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- cột 2 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- cột 3 -->
+
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- cột 4 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- cột 5 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- cột 6 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- cột 7 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+                </div>
+                <!-- cột 8-->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- hàng 3 -->
+            <div class="table-row font-weight-bold" style="font-size: 12px;">
+                <!-- cột 1 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <span>Lần 2 </span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- cột 2 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- cột 3 -->
+
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- cột 4 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- cột 5 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- cột 6 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- cột 7 -->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+                </div>
+                <!-- cột 8-->
+                <div class="table-cell" style="flex: 1 1 8%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="" update=""></hs-textarea-line>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row no-gutters mt-3">
+            <div class="col-2 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                Toàn Trạng:
+            </div>
+            <div class="col-3">
+                <hs-input-check afterText="Tốt" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-3">
+                <hs-input-check afterText="Trung bình" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-3">
+                <hs-input-check afterText="Xấu" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-2 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                Đau ngực:
+            </div>
+            <div class="col-3">
+                <hs-input-check afterText="Không" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-5">
+                <hs-input-check afterText="Có (Đo điện tâm đồ nếu cần thiết)"
+                    [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-2 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                Thang điểm đau
+            </div>
+
+            <div class="col-4 ">
+                <hs-textarea-line textareaStyle="font-weight: bold; text-transform: uppercase;" [value]=""
+                    update=""></hs-textarea-line>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-2 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                Nguy cơ té ngã
+            </div>
+            <div class="col-2">
+                <hs-input-check afterText="Không" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-2">
+                <hs-input-check afterText="Thấp" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-2">
+                <hs-input-check afterText="Trung bình" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-2">
+                <hs-input-check afterText="Cao" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+        </div>
+
+
+        <div class="row no-gutters">
+            <div class="col-2 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                Trạng thái tinh thần:
+            </div>
+            <div class="col-2">
+                <hs-input-check afterText="Bình thường" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-2">
+                <hs-input-check afterText="Lo lắng" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-2">
+                <hs-input-check afterText="Ủ rũ" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-2">
+                <hs-input-check afterText="Kích động" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-2">
+                <hs-input-check afterText="Hung hăng" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-3 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                Nồng độ đường huyết
+            </div>
+
+            <div class="col-3">
+                <hs-textarea-line textareaStyle="font-weight: bold; text-transform: uppercase;" [value]=""
+                    update=""></hs-textarea-line>
+            </div>
+
+            <div class="col-4 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                (đo đường huyết nếu cần thiết)
+            </div>
+        </div>
+
+
+        <div class="row no-gutters">
+            <div class="col-2 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                Dị ứng:
+            </div>
+            <div class="col-4">
+                <hs-input-check afterText="Không" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="">
+                <hs-input-check afterText="Có" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-3">
+                <hs-textarea-line textareaStyle="font-weight: bold; text-transform: uppercase;" [value]=""
+                    update=""></hs-textarea-line>
+            </div>
+        </div>
+
+
+        <div class="row no-gutters">
+            <div class="col-4 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                <strong>Kết quả mức độ cấp cứu:</strong>
+            </div>
+            <div class="col-3">
+                <hs-input-check afterText="Loại 1" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-2">
+                <hs-input-check afterText="Loại 2" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-3">
+                <hs-input-check afterText="Loại 3" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+        </div>
+
+
+        <div class="row no-gutters">
+            <div class="col-4 " style="font-family: 'Times New Roman'; font-size: 11pt">
+
+            </div>
+            <div class="col-3">
+                <hs-input-check afterText="Loại 4" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-3">
+                <hs-input-check afterText="Loại 5" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-4 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                Người bệnh được chuyển đến:
+            </div>
+            <div class="col-3">
+                <hs-input-check afterText="Phòng hồi sức" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-2">
+                <hs-input-check afterText="Phòng cấp cứu" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-3">
+                <hs-input-check afterText="Khác" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+        </div>
+
+
+        <div class="row no-gutters">
+            <div class="col-4 " style="font-family: 'Times New Roman'; font-size: 11pt">
+                Người bệnh được chuyển khoa khác
+            </div>
+            <div class="col-3">
+                <hs-input-check afterText="Không" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-4">
+                <hs-input-check afterText="Có - Ghi rõ và nêu lý do:" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+            <div class="col-12">
+                <hs-textarea-line rows="2" textareaStyle="font-size: 11pt; font-family: 'Times New Roman';" [value]=""
+                    update="">
+                </hs-textarea-line>
+            </div>
+        </div>
+
+
+        <div class="row no-gutters">
+            <div class="col-3">
+                <hs-textarea-line label="Giờ thực hiện:" [value]="" update=""
+                    labelStyle="font-style: italic; font-size: 11pt;" textareaStyle="font-weight: bold;">
+                </hs-textarea-line>
+            </div>
+
+             <div class="col-6">
+                <hs-textarea-line label="Họ và tên người thực hiện" [value]="" update=""
+                    labelStyle="font-weight: bold; font-size: 11pt;" textareaStyle="font-weight: bold;">
+                </hs-textarea-line>
+            </div>
+
+             <div class="col-2">
+                <hs-textarea-line label="Chữ ký" [value]="" update=""
+                    labelStyle="font-style: italic; font-size: 11pt;" textareaStyle="font-weight: bold;">
+                </hs-textarea-line>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</hoso-page>
