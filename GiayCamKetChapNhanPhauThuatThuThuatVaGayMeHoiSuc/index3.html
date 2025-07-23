@@ -29,7 +29,7 @@
             <div class="col-8">
                 <hs-textarea-line label="Họ và tên thân nhân:"
                     textareaStyle="font-weight: bold; text-transform: uppercase;"
-                    [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+                    [value]="context.tempData.hsBenhAn.ThanNhan.HoTen"
                     update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
             </div>
             <div class="col-4">
@@ -42,7 +42,7 @@
             <div class="col-7">
                 <hs-textarea-line label="Quan hệ với người bệnh:"
                     textareaStyle="font-weight: bold; text-transform: uppercase;"
-                    [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+                    [value]="context.tempData.hsBenhAn.ThanNhan.HoTen"
                     update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
             </div>
         </div>
@@ -177,9 +177,9 @@
                 <div style="font-style: italic;">
                     (Ký, ghi rõ họ tên)
                 </div>
-                <hs-signature signaturePositionCode="NguoiBenhThanNhan"
+                <!-- <hs-signature signaturePositionCode="NguoiBenhThanNhan"
                     [signatureHistory]="context.tempData.DSHSLichSuKySos['NguoiBenhThanNhan']">
-                </hs-signature>
+                </hs-signature> -->
             </div>
         </div>
 
