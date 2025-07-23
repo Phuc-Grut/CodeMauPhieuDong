@@ -1,0 +1,306 @@
+<hoso-page style="font-size: 12pt; line-height: 20px;">
+    <div class="row no-gutters" style="line-height: normal;">
+        <!-- Dòng tiêu đề quốc hiệu -->
+        <div class="row w-100 mb-2">
+            <!-- Cột trái -->
+            <div class="col-3">
+                <div>Cơ quan chủ quản................</div>
+                <div>Cơ sở KB, CB.....................</div>
+            </div>
+
+            <!-- Cột giữa: Quốc hiệu -->
+            <div class="col-6 text-center">
+                <div style="font-weight: bold;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+                <div style="text-decoration: underline;">Độc lập - Tự do - Hạnh phúc</div>
+            </div>
+
+            <!-- Cột phải -->
+            <div class="col-3 text-right">
+                <div><strong>MS: 01/BV2</strong></div>
+            </div>
+        </div>
+
+        <!-- Tiêu đề biểu mẫu -->
+        <div class="row no-gutter row w-100 mt-5">
+            <div class="col-12 text-center">
+                <div class="font-weight-bold text-uppercase">
+                    GIẤY CAM KẾT CHẤP THUẬN<br />
+                    PHẪU THUẬT, THỦ THUẬT VÀ GÂY MÊ HỒI SỨC
+                </div>
+                <div style="font-style: italic;">(chưa làm)</div>
+            </div>
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="row w-100 justify-content-center mt-2 mb-3">
+            <div class="col-auto">
+                <hs-input-check afterText="Cấp cứu" [checked]="context.tempData.CapCuu"
+                    update="tempData.CapCuu"></hs-input-check>
+            </div>
+            <div class="col-auto">
+                <hs-input-check afterText="Bán cấp" [checked]="context.tempData.BanCap"
+                    update="tempData.BanCap"></hs-input-check>
+            </div>
+            <div class="col-auto">
+                <hs-input-check afterText="Chương trình/Phiên" [checked]="context.tempData.ChuongTrinh"
+                    update="tempData.ChuongTrinh"></hs-input-check>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mở đầu phần I -->
+    <div style="font-size: 12pt; line-height: 1.4;">
+        <div>Chúng tôi có tên dưới đây cùng làm Bản cam kết như sau:</div>
+
+        <div class="font-weight-bold text-uppercase mt-1 mb-2">
+            I. BÁC SĨ PHẪU THUẬT/THỦ THUẬT/GÂY MÊ HỒI SỨC:
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12">
+                <hs-textarea-line label="Tôi tên là:" textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="" update=""></hs-textarea-line>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-5">
+                <hs-textarea-line label="Chức Danh:" textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="" update=""></hs-textarea-line>
+            </div>
+            <div class="col-7">
+                <hs-textarea-line label="Khoa: " [value]="" update=""></hs-textarea-line>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-4">
+                <hs-textarea-line label="và Bác Sỹ:" textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="" update=""></hs-textarea-line>
+            </div>
+
+            <div class="col-4">
+                <hs-textarea-line label="Chức danh:" [value]="" update=""></hs-textarea-line>
+            </div>
+
+            <div class="col-4 d-flex align-items-end">
+                <span class="ml-2" style="font-size: 11pt;">(Khoa phẫu thuật Gây mê hồi sức)</span>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12">
+                <hs-textarea-line label="Được phân công thực hiện phẫu thuật/thủ thuật/gây mê cho người bệnh"
+                    textareaStyle="font-weight: bold; text-transform: uppercase;" [value]=""
+                    update=""></hs-textarea-line>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-12">
+                <hs-textarea-line label="Chẩn đoán" textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="" update=""></hs-textarea-line>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div>
+                    Chúng tôi đã tư vấn, giải thích đầy đủ, rõ ràng những thông tin liên quan đến cuộc phẫu thuật/thủ
+                    thuật/gây
+                    mê hồi sức cho người bệnh/thân nhân người bệnh về các vấn đề sau:
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12 ml-4">
+                <hs-input-check afterText="Chẩn đoán" [checked]="context.tempData.CheckChanDoan"
+                    update="tempData.CheckChanDoan"></hs-input-check>
+            </div>
+            <div class="col-12 ml-4">
+                <hs-input-check afterText="Lý do phẫu thuật/thủ thuật" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+            <div class="col-12 ml-4">
+                <hs-input-check afterText="Rủi ro, nguy cơ nếu không thực hiện phẫu thuật/thủ thuật"
+                    [checked]="context.tempData.CheckRuiRoKhongThucHien"
+                    update="tempData.CheckRuiRoKhongThucHien"></hs-input-check>
+            </div>
+            <div class="col-12 d-flex ml-4">
+                <hs-input-check afterText="Kết quả sau phẫu thuật/thủ thuật (Dự kiến)"
+                    [checked]="context.tempData.CheckKetQuaDuKien" update="tempData.CheckKetQuaDuKien"></hs-input-check>
+                <div class="flex-grow-1" style="border-bottom: 1px dotted #333;"></div>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12 mt-1 mb-1">
+                <div>Phương pháp phẫu thuật dự kiến</div>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-4">
+                <hs-input-check afterText="Phẫu thuật mở" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-4">
+                <hs-input-check afterText="Phẫu thuật nội soi" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+
+            <div class="col-4 d-flex align-items-end">
+                <hs-input-check afterText="Thủ thuật" [checked]="context.tempData.CheckLyDoPhauThuat"
+                    update="tempData.CheckLyDoPhauThuat"></hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12 mt-1 mb-1">
+                <div>Phương pháp gây mê hồi sức dự kiến</div>
+            </div>
+        </div>
+
+        <!-- Gộp tất cả các checkbox gây mê vào 1 div -->
+        <div>
+            <!-- Dòng 1 -->
+            <div class="row no-gutters mb-1">
+                <div class="col-4">
+                    <hs-input-check afterText="Mê nội khí quản" [checked]="context.tempData.MeNoiKhiQuan"
+                        update="tempData.MeNoiKhiQuan"></hs-input-check>
+                </div>
+                <div class="col-4">
+                    <hs-input-check afterText="Mê mask thanh quản" [checked]="context.tempData.MeMask"
+                        update="tempData.MeMask"></hs-input-check>
+                </div>
+                <div class="col-4">
+                    <hs-input-check afterText="Mê tĩnh mạch" [checked]="context.tempData.MeTinhMach"
+                        update="tempData.MeTinhMach"></hs-input-check>
+                </div>
+            </div>
+
+            <!-- Dòng 2 -->
+            <div class="row no-gutters mb-1">
+                <div class="col-4">
+                    <hs-input-check afterText="Tê tuỷ sống" [checked]="context.tempData.TeTuySong"
+                        update="tempData.TeTuySong"></hs-input-check>
+                </div>
+                <div class="col-4">
+                    <hs-input-check afterText="Tê ngoài màng cứng" [checked]="context.tempData.TeNgoaiMangCung"
+                        update="tempData.TeNgoaiMangCung"></hs-input-check>
+                </div>
+                <div class="col-auto">
+                    <hs-input-check afterText="Tê đám rối thần kinh" [checked]="context.tempData.TeDamRoi"
+                        update="tempData.TeDamRoi"></hs-input-check>
+                </div>
+            </div>
+
+            <!-- Dòng 3 -->
+            <div class="row no-gutters">
+                <div class="col-4">
+                    <hs-input-check afterText="Tiền mê + Tê tại chỗ" [checked]="context.tempData.TienMeTeTaiCho"
+                        update="tempData.TienMeTeTaiCho"></hs-input-check>
+                </div>
+                <div class="col-4">
+                    <hs-input-check afterText="Khác." [checked]="context.tempData.MeKhac"
+                        update="tempData.MeKhac"></hs-input-check>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12 mt-1 mb-1">
+                <div>Các phương pháp điều trị khác ngoài phẫu thuật/thủ thuật có thể xảy ra</div>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-4">
+                <hs-input-check afterText="Không" [checked]="context.tempData.TienMeTeTaiCho"
+                    update="tempData.TienMeTeTaiCho"></hs-input-check>
+            </div>
+            <div class="">
+                <hs-input-check afterText="Có, " [checked]="context.tempData.MeKhac"
+                    update="tempData.MeKhac"></hs-input-check>
+            </div>
+            <div class="col-7 ml-1">
+                <hs-textarea-line label=" cụ thể:" textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="" update=""></hs-textarea-line>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12 mt-1 mb-1">
+                <div>Nguy cơ tai biến trong và sau phấu thuật có thể sảy ra</div>
+            </div>
+        </div>
+
+
+        <div class="">
+            <!-- Dòng 1 -->
+            <div class="row no-gutters mb-1">
+                <div class="col-4">
+                    <hs-input-check afterText="Phản ứng thuốc" [checked]="context.tempData.MeNoiKhiQuan"
+                        update="tempData.MeNoiKhiQuan"></hs-input-check>
+                </div>
+                <div class="col-4">
+                    <hs-input-check afterText="Suy hô hấp - tuần hoàn" [checked]="context.tempData.MeMask"
+                        update="tempData.MeMask"></hs-input-check>
+                </div>
+                <div class="col-4">
+                    <hs-input-check afterText="Chảy máu" [checked]="context.tempData.MeTinhMach"
+                        update="tempData.MeTinhMach"></hs-input-check>
+                </div>
+            </div>
+
+            <!-- Dòng 2 -->
+            <div class="row no-gutters mb-1">
+                <div class="col-4">
+                    <hs-input-check afterText="Nhiếm trùng" [checked]="context.tempData.TeTuySong"
+                        update="tempData.TeTuySong"></hs-input-check>
+                </div>
+                <div class="col-2">
+                    <hs-input-check afterText="Tử vong" [checked]="context.tempData.TeNgoaiMangCung"
+                        update="tempData.TeNgoaiMangCung"></hs-input-check>
+                </div>
+                <div class="">
+                    <hs-input-check afterText="Nguy cơ/" [checked]="context.tempData.TeDamRoi"
+                        update="tempData.TeDamRoi"></hs-input-check>
+                </div>
+                <div class="col-4 ml-1">
+                    <hs-textarea-line label="rủi ro khác:" textareaStyle="font-weight: bold; text-transform: uppercase;"
+                        [value]="" update=""></hs-textarea-line>
+                </div>
+            </div>
+        </div>
+
+        <!-- Đoạn: Chúng tôi đã dành đủ thời gian... -->
+        <div class="row no-gutters mt-2">
+            <div class="col-12"
+                style="font-family: 'Times New Roman'; font-size: 12pt; line-height: 20px; text-indent: 30px; text-align: justify;">
+                Chúng tôi đã dành đủ thời gian để người bệnh/thân nhân đặt các câu hỏi liên quan đến phẫu thuật/thủ
+                thuật/gây mê sẽ được thực hiện hoặc các mối quan tâm khác và chúng tôi đã trả lời tất cả các câu hỏi đó.
+            </div>
+        </div>
+
+        <div class="row no-gutters mt-2">
+            <div class="col-12"
+                style="font-family: 'Times New Roman'; font-size: 12pt; line-height: 20px; text-indent: 30px; text-align: justify;">
+                Chúng tôi cam kết phục vụ người bệnh bằng lương tâm và trách nhiệm của người thầy thuốc cùng với tất cả
+                kiến thức, sự hiểu biết về chuyên môn và phương tiện hiện có của
+                <span
+                    style="display:inline-block; min-width:220px; border-bottom:1px dotted #333; padding: 0 4px; vertical-align: bottom;">
+                    <hs-input-text placeholder="Tên cơ sở khám bệnh, chữa bệnh" [value]="context.tempData.TenCoSo"
+                        update="tempData.TenCoSo"
+                        inputStyle="border: none; width: 100%; font-style: italic; font-size: 11pt; font-family: 'Times New Roman'; line-height: 20px;">
+                    </hs-input-text>
+                </span>
+                để nỗ lực đem lại kết quả tốt nhất cho người bệnh.
+            </div>
+        </div>
+
+
+
+
+
+</hoso-page>
