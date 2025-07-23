@@ -1,0 +1,188 @@
+<hoso-page style="font-size: 12pt; line-height: 20px;">
+
+
+    <!-- Mở đầu phần I -->
+
+
+    <!-- Phần 2 :NGƯỜI BỆNH/THÂN NHÂN: -->
+
+    <div style="font-size: 12pt; line-height: 1.4;">
+        <div class="font-weight-bold text-uppercase mt-1 mb-2">
+            II. người bệnh/thân nhân
+        </div>
+
+
+        <div class="row no-gutters">
+            <div class="col-7">
+                <hs-textarea-line label="Họ và tên người bệnh:"
+                    textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+                    update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
+            </div>
+            <div class="col-4">
+                <hs-datepicker label="Năm Sinh" [value]="context.tempData.hsBenhAn.BenhNhan.NgaySinh"
+                    update="tempData.hsBenhAn.BenhNhan.NgaySinh"></hs-datepicker>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-8">
+                <hs-textarea-line label="Họ và tên thân nhân:"
+                    textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+                    update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
+            </div>
+            <div class="col-4">
+                <hs-datepicker label="Năm Sinh" [value]="context.tempData.hsBenhAn.BenhNhan.NgaySinh"
+                    update="tempData.hsBenhAn.BenhNhan.NgaySinh"></hs-datepicker>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-7">
+                <hs-textarea-line label="Quan hệ với người bệnh:"
+                    textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+                    update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
+            </div>
+        </div>
+
+        <!-- Đoạn mô tả cố định -->
+        <div class="row no-gutters mt-2">
+            <div class="col-12"
+                style="font-family: 'Times New Roman'; font-size: 12pt; line-height: 20px; text-indent: 30px; text-align: justify;">
+                Tôi đã được nghe các Bác sỹ giải thích và đã trao đổi với các Bác sỹ về tất cả các thông tin của cuộc
+                phẫu thuật/thủ thuật/gây mê, những nguy cơ thường gặp có thể xảy ra trong phẫu thuật/thủ thuật/gây mê
+                như:
+            </div>
+            <div class="col-12">
+                <hs-textarea-line rows="2" textareaStyle="font-size: 12pt; font-family: 'Times New Roman';" [value]=""
+                    update="">
+                </hs-textarea-line>
+            </div>
+            <div class="col-12"
+                style="font-family: 'Times New Roman'; font-size: 12pt; line-height: 20px; text-align: justify;">
+                và mức độ thành công. Tôi đã hiểu lý do phải thực hiện phẫu thuật/thủ thuật/gây mê và đồng ý để Bác sỹ
+                phẫu thuật/thủ thuật/gây mê cho tôi/thân nhân của tôi.
+            </div>
+
+            <div class="col-12"
+                style="font-family: 'Times New Roman'; font-size: 12pt; line-height: 20px; text-indent: 30px; text-align: justify;">
+                Tôi đã được tư vấn những thông tin về chi phí phẫu thuật/thủ thuật/gây mê, vật tư y tế tiêu hao dự kiến
+                sử dụng trong
+                cuộc phẫu thuật/thủ thuật/gây mê, tôi cam kết chi trả chi phí khám bệnh, chữa bệnh ngoài phạm vi được
+                hưởng và mức hưởng theo quy định
+                của pháp luật về bảo hiểm y tế và các quy định khác.
+            </div>
+
+            <div class="col-12"
+                style="font-family: 'Times New Roman'; font-size: 12pt; line-height: 20px; text-indent: 30px; text-align: justify;">
+                Tôi đồng ý để các Bác sỹ thực hiện các phẫu thuật/thủ thuật/gây mê/kiểm tra/điều trị nếu việc đó là cần
+                thiết để cứu tính mạng hoặc ngăn ngừa tác hại nghiêm trọng cho sức khỏe của tôi/thân nhân của tôi
+            </div>
+
+            <div class="col-12"
+                style="font-size: 12pt; font-family: 'Times New Roman'; line-height: 20px; text-indent: 30px; text-align: justify;">
+                Tôi hiểu rằng các Bác sỹ của
+                <span style="font-style: italic;">(tên cơ sở khám bệnh, chữa bệnh)</span>
+                <span style="display:inline-block; min-width: 200px; border-bottom:1px dotted #333; padding:0 4px;">
+                    <hs-input-text placeholder="Tên cơ sở" [value]="context.tempData.TenCoSoHieuRang"
+                        update="tempData.TenCoSoHieuRang"
+                        inputStyle="border: none; width: 100%; font-style: italic; font-size: 11pt;"></hs-input-text>
+                </span>
+                sẽ làm hết lương tâm, trách nhiệm cùng với tất cả kiến thức, sự hiểu biết và phương tiện hiện có để
+                nỗ lực đem lại kết quả tốt nhất cho tôi/thân nhân của tôi. Tuy nhiên, cũng không thể đảm bảo hoàn
+                toàn với tôi rằng phẫu thuật/thủ thuật sẽ cải thiện tình trạng hoặc không làm cho tình trạng của
+                tôi/thân nhân của tôi trở nên xấu đi.
+            </div>
+
+            <div class="col-12"
+                style="font-family: 'Times New Roman'; font-size: 12pt; line-height: 20px; text-indent: 30px; text-align: justify;">
+                Tôi đã đọc bản cam kết với tinh thần hoàn toàn minh mẫn và hiểu biết. Tôi đã hiểu các vấn đề mà Bác
+                sỹ đã giải thích về tiến trình phẫu thuật/thủ thuật/gây mê cho tôi/thân nhân của tôi. Tôi xin hoàn toàn
+                chịu trách nhiệm với quyết định đồng ý cho Bác sỹ phẫu thuật/thủ thuật cho tôi/thân nhân của tôi.
+
+            </div>
+
+            <div class="col-12"
+                style="font-family: 'Times New Roman'; font-size: 12pt; line-height: 20px; text-indent: 30px; text-align: justify;">
+                Sau khi nghe các Bác sỹ cho biết tình trạng bệnh của tôi/thân nhân của tôi, những nguy hiểm của bệnh nếu
+                không thực hiện phẫu thuật/thủ thuật/gây mê hồi sức và những rủi ro có thể xảy ra do bệnh tật, do khi
+                tiến hành phẫu thuật/thủ thuật/gây mê hồi sức; tôi tự nguyện viết giấy cam đoan này:
+            </div>
+
+            <div class="col-12"
+                style="font-family: 'Times New Roman'; font-size: 12pt; line-height: 20px; text-indent: 30px; text-align: justify;">
+                Sau khi nghe các Bác sỹ cho biết tình trạng bệnh của tôi/thân nhân của tôi, những nguy hiểm của bệnh nếu
+                không thực hiện phẫu thuật/thủ thuật/gây mê hồi sức và những rủi ro có thể xảy ra do bệnh tật, do khi
+                tiến hành phẫu thuật/thủ thuật/gây mê hồi sức; tôi tự nguyện viết giấy cam đoan này:
+            </div>
+
+            <div class="col-12 text-center">
+                <div>1. Đồng ý xin phẫu thuật, thủ thuật, gây mê hồi sức và để giấy này làm bằng chứng.</div>
+                <div>2. Không đồng ý phẫu thuật, thủ thuật, gây mê hồi sức và để giấy này làm bằng chứng.</div>
+                <div class="text-center mt-1" style="font-style: italic;">
+                    (Câu 1 và câu 2 do người bệnh, thân nhân của người bệnh tự viết dưới đây).
+                </div>
+            </div>
+
+            <!-- Dòng nhập tay của người bệnh -->
+
+            <div class="col-12">
+                <span>
+                    <hs-input-text placeholder="Nhập nội dung người bệnh viết tay tại đây"
+                        [value]="context.tempData.NoiDungVietTay" update="tempData.NoiDungVietTay"
+                        inputStyle="border:none; width:100%; font-size:11pt; font-family:'Times New Roman';">
+                    </hs-input-text>
+                </span>
+            </div>
+        </div>
+
+        <div class="row no-gutters mt-5" style="font-size: 12pt; font-family: 'Times New Roman';">
+            <!-- PHẪU THUẬT VIÊN/ BÁC SỸ THỦ THUẬT -->
+            <div class="col-4 text-center">
+                <div class="font-weight-bold text-uppercase">
+                    PHẪU THUẬT VIÊN/ BÁC SỸ<br />
+                    THỰC HIỆN THỦ THUẬT
+                </div>
+                <div style="font-style: italic;">
+                    (Ký, ghi rõ họ tên)
+                </div>
+                <hs-signature signaturePositionCode="PhauThuatVien"
+                    [signatureHistory]="context.tempData.DSHSLichSuKySos['PhauThuatVien']">
+                </hs-signature>
+            </div>
+
+            <!-- BÁC SỸ GÂY MÊ -->
+            <div class="col-4 text-center">
+                <div class="font-weight-bold text-uppercase">
+                    BÁC SỸ GÂY MÊ
+                </div>
+                <div style="font-style: italic;">
+                    (Ký, ghi rõ họ tên)
+                </div>
+                <div class="mt-1">
+                    Ngày...... tháng....... năm 20.....
+                </div>
+                <hs-signature signaturePositionCode="BacSyGayMe"
+                    [signatureHistory]="context.tempData.DSHSLichSuKySos['BacSyGayMe']">
+                </hs-signature>
+            </div>
+
+            <!-- NGƯỜI BỆNH/THÂN NHÂN -->
+            <div class="col-4 text-center">
+                <div class="font-weight-bold text-uppercase">
+                    NGƯỜI BỆNH/THÂN NHÂN
+                </div>
+                <div style="font-style: italic;">
+                    (Ký, ghi rõ họ tên)
+                </div>
+                <hs-signature signaturePositionCode="NguoiBenhThanNhan"
+                    [signatureHistory]="context.tempData.DSHSLichSuKySos['NguoiBenhThanNhan']">
+                </hs-signature>
+            </div>
+        </div>
+
+    </div>
+
+</hoso-page>

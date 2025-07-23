@@ -298,6 +298,73 @@
                 để nỗ lực đem lại kết quả tốt nhất cho người bệnh.
             </div>
         </div>
+    </div>
+
+    <!-- Phần 2 :NGƯỜI BỆNH/THÂN NHÂN: -->
+
+    <div style="font-size: 12pt; line-height: 1.4;">
+        <div class="font-weight-bold text-uppercase mt-1 mb-2">
+            II. người bệnh/thân nhân
+        </div>
+
+
+        <div class="row no-gutters">
+            <div class="col-7">
+                <hs-textarea-line label="Họ và tên người bệnh:"
+                    textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+                    update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
+            </div>
+            <div class="col-4">
+                <hs-datepicker label="Năm Sinh" [value]="context.tempData.hsBenhAn.BenhNhan.NgaySinh"
+                    update="tempData.hsBenhAn.BenhNhan.NgaySinh"></hs-datepicker>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-8">
+                <hs-textarea-line label="Họ và tên thân nhân:"
+                    textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+                    update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
+            </div>
+            <div class="col-4">
+                <hs-datepicker label="Năm Sinh" [value]="context.tempData.hsBenhAn.BenhNhan.NgaySinh"
+                    update="tempData.hsBenhAn.BenhNhan.NgaySinh"></hs-datepicker>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-7">
+                <hs-textarea-line label="Quan hệ với người bệnh:"
+                    textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+                    update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
+            </div>
+        </div>
+
+        <!-- Đoạn mô tả cố định -->
+        <div class="row no-gutters mt-2">
+            <div class="col-12"
+                style="font-family: 'Times New Roman'; font-size: 12pt; line-height: 20px; text-indent: 30px; text-align: justify;">
+                Tôi đã được nghe các Bác sỹ giải thích và đã trao đổi với các Bác sỹ về tất cả các thông tin của cuộc
+                phẫu thuật/thủ thuật/gây mê, những nguy cơ thường gặp có thể xảy ra trong phẫu thuật/thủ thuật/gây mê
+                như:
+            </div>
+        </div>
+
+        <!-- Ô nhập nội dung -->
+        <div class="row no-gutters mt-1">
+            <div class="col-12">
+                <hs-textarea-line textareaStyle="font-size: 12pt; font-family: 'Times New Roman'; min-height: 60px;"
+                    [value]="" update="">
+                </hs-textarea-line>
+            </div>
+        </div>
+        
+    </div>
+
+
 
 
 
