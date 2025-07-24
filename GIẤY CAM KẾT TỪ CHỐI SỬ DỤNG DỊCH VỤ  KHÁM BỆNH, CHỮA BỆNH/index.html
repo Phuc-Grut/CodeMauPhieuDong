@@ -1,0 +1,173 @@
+<hoso-page style="font-size: 12pt; line-height: 20px; margin-top: 35px; margin-bottom: 150px;">
+
+    <!-- Dòng tiêu đề quốc hiệu -->
+    <div style="font-family: 'Times New Roman'; font-size: 11pt; width: 100%; padding: 0 110px;">
+        <div style="display: flex; justify-content: space-between">
+
+            <!-- Cột trái -->
+            <div style="text-align: center;">
+                <div
+                    style="text-transform: uppercase; font-weight: normal; font-family: 'Times New Roman'; font-size: 11pt;">
+                    SỞ Y TẾ THÀNH PHỐ ĐÀ NẴNG
+                </div>
+                <div style="
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-family: 'Times New Roman';
+                    font-size: 11pt;
+                    display: inline-block;
+                    border-bottom: 1px solid black;
+                    padding-bottom: 2px;
+                    ">
+                    BỆNH VIỆN TÂM THẦN
+                </div>
+            </div>
+
+
+            <!-- Cột phải -->
+            <!-- CỘNG HÒA - ĐỘC LẬP căn giữa -->
+            <div style="text-align: center; font-family: 'Times New Roman'; font-size: 11pt;">
+                <div style="font-weight: bold;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+                <div style="text-decoration: underline; font-weight: bold;">Độc lập - Tự do - Hạnh phúc</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Tiêu đề biểu mẫu -->
+    <div class="row no-gutter row w-100 mt-4">
+        <div class="col-12 text-center">
+            <div class="font-weight-bold text-uppercase">
+                GIẤY CAM KẾT TỪ CHỐI SỬ DỤNG DỊCH VỤ<br>
+                KHÁM BỆNH, CHỮA BỆNH
+            </div>
+        </div>
+    </div>
+
+    <div style="font-size: 13pt; font-family: 'Times New Roman'; line-height: 1.6; margin-top: 12px; padding: 0 100px;">
+
+        <div class="font-weight-bold">
+            I. THÔNG TIN CÁ NHÂN CỦA NGƯỜI KÝ
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-5">
+                <hs-textarea-line label="Tôi tên là" textareaStyle="font-weight: bold;" [value]=""
+                    update=""></hs-textarea-line>
+            </div>
+            <div class="col-3">
+                <hs-textarea-line label="Năm sinh: " [value]="" update=""></hs-textarea-line>
+            </div>
+
+            <div class="col-4">
+                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNhan.GioiTinh" [value]="true"
+                    update="tempData.hsBenhAn.BenhNhan.GioiTinh" class="i-checks" afterText=" Nam "></hs-input-check>
+
+                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNhan.GioiTinh" [value]="false"
+                    update="tempData.hsBenhAn.BenhNhan.GioiTinh" class="i-checks" afterText=" Nữ"></hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-6">
+                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNhan.GioiTinh" [value]="true"
+                    update="tempData.hsBenhAn.BenhNhan.GioiTinh" class="i-checks"
+                    afterText=" Là người bệnh "></hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-1">
+                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNhan.GioiTinh" [value]="true"
+                    update="tempData.hsBenhAn.BenhNhan.GioiTinh" class="i-checks" afterText="Là "></hs-input-check>
+            </div>
+
+            <div class="col-2">
+                <hs-textarea-line label="" [value]="" update=""></hs-textarea-line>
+            </div>
+
+            <div class="col-5">
+                <hs-textarea-line label="của người bệnh" [value]="" update=""></hs-textarea-line>
+            </div>
+
+            <div class="col-4">
+                <hs-textarea-line label="Năm sinh:" [value]="" update=""></hs-textarea-line>
+            </div>
+        </div>
+
+
+        <div class="row no-gutters">
+
+
+            <div class="col-8">
+                <hs-textarea-line label="Đang điều trị tại khoa:" [value]="" update=""></hs-textarea-line>
+            </div>
+
+            <div class="col-4">
+                <hs-phong-giuong-picker [soPhong]="context.tempData.hsBenhAn.SoPhong"
+                    soPhongUpdate="tempData.hsBenhAn.SoPhong" [soGiuong]="context.tempData.hsBenhAn.SoGiuong"
+                    soGiuongUpdate="tempData.hsBenhAn.SoGiuong"></hs-phong-giuong-picker>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div style="font-size: 13pt; font-family: 'Times New Roman'; line-height: 1.6; margin-top: 12px; padding: 0 100px;">
+
+        <div class="font-weight-bold;" style="text-transform: uppercase;">
+            II. Nội dung
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12">
+                <hs-textarea-line label="Phương pháp điều trị/chỉ định dự kiến thực hiện:" rows="3"
+                    textareaStyle="font-weight: bold;" [value]="" update=""></hs-textarea-line>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12" style="text-indent: 50px;">
+                Tôi đã được giải thích về lợi ích của phương pháp điều trị dự kiến, những nguy cơ, đặc biệt là những rủi
+                ro, biến chứng có thể xảy ra nếu từ chối điều trị hoặc sử dụng dịch vụ khám bệnh, chữa bệnh nêu trên.
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12" style="text-indent: 50px;">
+                Tôi xác nhận việc từ chối điều trị hoặc sử dụng dịch vụ y tế trên <br> vào .........giờ...…
+                ngày........./........../20..........
+            </div>
+        </div>
+
+
+        <div
+            style="display: flex; justify-content: flex-end; padding: 0 100px; margin-top: 20px; font-family: 'Times New Roman'; font-size: 13pt;">
+            <div style="text-align: center;">
+                <div style="font-weight: bold;">Người bệnh/thân nhân</div>
+                <div><i>(Ký, ghi rõ họ tên)</i></div>
+            </div>
+        </div>
+
+
+        <div class="row no-gutters">
+            <div class="col-12" style=" margin-top: 100px;">
+                <hs-textarea-line label="Nguy cơ/rủi ro" rows="3" labelStyle="text-indent: 50px;"
+                    textareaStyle="text-indent: 30px;" [value]="" update=""></hs-textarea-line>
+            </div>
+        </div>
+
+
+        <div
+            style="display: flex; justify-content: flex-end; padding: 0 100px; margin-top: 20px; font-family: 'Times New Roman'; font-size: 13pt;">
+            <div style="text-align: center;">
+                <div style="font-weight: bold;">Bác sỹ điều trị</div>
+                <div><i>(Ký, ghi rõ họ tên)</i></div>
+                <hs-signature signaturePositionCode="BacSi"
+                    [signatureHistory]="context.tempData.DSHSLichSuKySos['BacSi']">
+                </hs-signature>
+            </div>
+        </div>
+    </div>
+</hoso-page>
