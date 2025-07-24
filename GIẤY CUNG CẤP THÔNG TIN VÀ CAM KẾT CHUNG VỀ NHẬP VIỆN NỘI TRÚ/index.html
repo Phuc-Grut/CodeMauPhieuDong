@@ -1,0 +1,209 @@
+<hoso-page style="font-size: 12pt; line-height: 20px; margin-top: 35px;">
+
+    <!-- Dòng tiêu đề quốc hiệu -->
+    <div style="font-family: 'Times New Roman'; font-size: 11pt; width: 100%; padding: 0 110px;">
+        <div style="display: flex; justify-content: space-between">
+
+            <!-- Cột trái -->
+            <div style="text-align: left;">
+                <div style="font-weight: bold;">BỆNH VIỆN TÂM THẦN ĐÀ NẴNG</div>
+                <div class="d-flex align-items-center mt-0">
+                    <strong style="margin-right: 4px;">KHOA</strong>
+                    <hs-textarea-line [label]="''" [value]="context.Khoa" update="Khoa"
+                        textareaStyle=" width: 120px; padding: 0px;"></hs-textarea-line>
+                </div>
+            </div>
+
+            <!-- Cột phải -->
+            <!-- CỘNG HÒA - ĐỘC LẬP căn giữa -->
+            <div style="text-align: center; font-family: 'Times New Roman'; font-size: 11pt;">
+                <div style="font-weight: bold;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+                <div style="text-decoration: underline; font-weight: bold;">Độc lập - Tự do - Hạnh phúc</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Tiêu đề biểu mẫu -->
+    <div class="row no-gutter row w-100 mt-4">
+        <div class="col-12 text-center">
+            <div class="font-weight-bold text-uppercase">
+                GIẤY CUNG CẤP THÔNG TIN VÀ CAM KẾT CHUNG <br>
+                VỀ NHẬP VIỆN NỘI TRÚ
+            </div>
+        </div>
+    </div>
+
+    <div style="font-size: 13pt; font-family: 'Times New Roman'; line-height: 1.6; margin-top: 12px; padding: 0 100px;">
+        <div class="font-weight-bold" style="text-indent: 60px;">
+            I. Thông tin hành chính
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-5">
+                <hs-textarea-line label="Họ và tên người bệnh:" textareaStyle="font-weight: bold;" [value]=""
+                    update=""></hs-textarea-line>
+            </div>
+            <div class="col-3">
+                <hs-textarea-line label="Tuổi: " [value]="" update=""></hs-textarea-line>
+            </div>
+
+            <div class="col-4">
+                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNhan.GioiTinh" [value]="true"
+                    update="tempData.hsBenhAn.BenhNhan.GioiTinh" class="i-checks" afterText="1. Nam "></hs-input-check>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNhan.GioiTinh" [value]="false"
+                    update="tempData.hsBenhAn.BenhNhan.GioiTinh" class="i-checks" afterText="2. Nữ"></hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-8">
+                <hs-textarea-line label="Địa chỉ:" textareaStyle="font-weight: bold;" [value]=""
+                    update=""></hs-textarea-line>
+            </div>
+            <div class="col-4">
+                <hs-textarea-line label="Điện thoại: " [value]="" update=""></hs-textarea-line>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12">
+                <hs-textarea-line label="Họ và tên thân nhân cần báo tin:" textareaStyle="font-weight: bold;" [value]=""
+                    update=""></hs-textarea-line>
+            </div>
+        </div>
+
+        <div class="row no-gutters ">
+            <div class="col-3">
+                <hs-textarea-line label="là" textareaStyle="font-weight: bold;" [value]="" update=""></hs-textarea-line>
+            </div>
+
+            <div class="col-auto" style="padding-right: 5px;">
+                của người bệnh.
+            </div>
+
+            <div class="col-6">
+                <hs-textarea-line label="Điện thoại:" textareaStyle="font-weight: bold;" [value]=""
+                    update=""></hs-textarea-line>
+            </div>
+        </div>
+
+        <div class="col-auto">
+            Các giấy tờ người bệnh/thân nhân nộp khi nhập viện:
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-auto">
+                - Bản sao căn cước/hộ chiếu:
+            </div>
+
+            <div class="col-auto" style="padding-left: 7px;">
+                <hs-input-check [selectedValue]="" update="" [value]="true" afterText="Có" style="margin-right: 7px;">
+                </hs-input-check>
+                <hs-input-check [selectedValue]="" update="" [value]="false" afterText="Không">
+                </hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-auto">
+                -Thẻ BHYT:
+            </div>
+
+            <div class="col-auto" style="padding-left: 7px;">
+                <hs-input-check [selectedValue]="" update="" [value]="true" afterText="Có" style="margin-right: 7px;">
+                </hs-input-check>
+
+                <hs-input-check [selectedValue]="" update="" [value]="false" afterText="Không"
+                    style="margin-right: 7px;">
+                </hs-input-check>
+
+                <hs-input-check [selectedValue]="" update="" [value]="false" afterText="Có, không mang theo">
+                </hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-auto">
+                - Giấy chuyển viện:
+            </div>
+
+            <div class="col-auto" style="padding-left: 7px;">
+                <hs-input-check [selectedValue]="" update="" [value]="true" afterText="Có" style="margin-right: 7px;">
+                </hs-input-check>
+                <hs-input-check [selectedValue]="" update="" [value]="false" afterText="Không">
+                </hs-input-check>
+            </div>
+        </div>
+
+        <div class="row no-gutters ">
+            <div class="col-12">
+                <hs-textarea-line label="- Khác:" textareaStyle="font-weight: bold;" [value]=""
+                    update=""></hs-textarea-line>
+            </div>
+        </div>
+    </div>
+
+
+    <div
+        style="font-size: 13pt; font-family: 'Times New Roman'; line-height: 1.6; margin-top: 6px; padding: 0 100px; text-indent: 60px;">
+        <div class="font-weight-bold ">
+            II. Cam kết của cơ sở khám chữa bệnh
+        </div>
+
+        <div>
+            1. Người bệnh được thông tin, giải thích về tình trạng sức khỏe; phương pháp, dịch vụ khám bệnh, chữa bệnh,
+            giá dịch vụ khám bệnh, chữa bệnh; được hướng dẫn cách tự theo dõi, chăm sóc, phòng ngừa tai biến.
+        </div>
+
+        <div>
+            2. Người bệnh được khám bệnh, chữa bệnh bằng phương pháp an toàn phù hợp với bệnh, tình trạng sức khỏe của
+            mình và điều kiện thực tế của cơ sở khám bệnh, chữa bệnh.
+        </div>
+
+        <div>
+            3. Người bệnh được tôn trọng danh dự, bảo vệ sức khỏe và tôn trọng bí mật riêng tư trong khám bệnh,
+        </div>
+
+        <div>
+            4. Người bệnh được lựa chọn phương pháp khám bệnh, chữa bệnh. Chấp nhận hoặc từ chối tham gia nghiên cứu y
+            sinh học về khám bệnh, chữa bệnh.
+        </div>
+
+        <div>
+            5. Người bệnh hoặc người đại diện của người bệnh được cung cấp tóm tắt hồ sơ bệnh án khi có yêu cầu bằng văn
+            bản.
+        </div>
+
+        <div>
+            6. Người bệnh được cung cấp và giải thích chi tiết về các khoản chi trả dịch vụ khám bệnh, chữa bệnh khi có
+            yêu cầu.
+        </div>
+
+        <div>
+            7. Người bệnh được từ chối khám bệnh, chữa bệnh và rời khỏi cơ sở khám bệnh, chữa bệnh khi có văn bản cam
+            kết.
+        </div>
+    </div>
+
+
+    <div
+        style="font-size: 13pt; font-family: 'Times New Roman'; line-height: 1.6; margin-top: 6px; padding: 0 100px; text-indent: 60px;">
+        <div class="font-weight-bold ">
+            Sau khi cung cấp các thông tin nêu trên, tôi xác nhận rằng:
+        </div>
+
+        <div>
+            1. Tôi đã giải thích cho người bệnh/thân nhân về nội dung và mục đích của mẫu giấy này.
+        </div>
+
+        <div>
+            2. Tôi đã dành đủ thời gian để người bệnh/thân nhân đặt các câu hỏi liên quan đến mẫu đơn và nội dung của
+            mẫu đơn hoặc bất kỳ mối quan tâm nào khác và tôi đã trả lời các câu hỏi/mối quan tâm đó.
+        </div>
+    </div>
+
+
+</hoso-page>
